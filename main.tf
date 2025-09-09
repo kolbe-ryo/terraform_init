@@ -49,7 +49,7 @@ resource "aws_subnet" "private_c" {
   cidr_block        = "10.0.3.0/24"
   availability_zone = "ap-northeast-1c"
   tags = {
-    Name = "Private-B"
+    Name = "Private-BB"
   }
 }
 
