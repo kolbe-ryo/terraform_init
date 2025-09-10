@@ -34,7 +34,7 @@ resource "aws_instance" "web" {
     network_interface_id = aws_network_interface.web.id
     device_index         = 0
   }
-  user_data = file("wordpress.sh")
+  user_data = file("./terraform-aws-wordpress/wordpress.sh")
   tags = {
     Name = "${var.name}-web"
   }
