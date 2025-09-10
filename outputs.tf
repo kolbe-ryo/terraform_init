@@ -1,10 +1,10 @@
 output "public_ip" {
-  value = aws_eip.wordpress.public_ip
+  value = module.wordpress.public_ip
 }
 output "rds_endpoint" {
-  value = aws_db_instance.wordpress.endpoint
+  value = module.wordpress.rds_endpoint
 }
 output "rds_password" {
-  value     = random_password.wordpress.result
+  value     = module.wordpress.rds_password
   sensitive = true
 }
