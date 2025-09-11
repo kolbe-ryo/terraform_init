@@ -129,7 +129,7 @@ resource "aws_db_subnet_group" "db" {
   name       = "wordpress"
   subnet_ids = [aws_subnet.private_a.id, aws_subnet.private_c.id]
   tags = {
-    Name = "DB subnet group"
+    Name = "DB subnet group."
   }
 }
 
