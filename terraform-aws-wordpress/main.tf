@@ -53,4 +53,8 @@ resource "aws_eip" "wordpress" {
 resource "aws_eip_association" "wordpress" {
   allocation_id        = aws_eip.wordpress.id
   network_interface_id = aws_network_interface.web.id
+    # インスタンスが完全に起動してからEIPを関連付ける
+  depends_on = [
+    aws_instance.web
+  ]
 }
